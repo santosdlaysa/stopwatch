@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200;300;400;500;700&display=swap');
 /* Mixin's */  
 @mixin transition {
   -webkit-transition: all 0.5s ease-in-out;
@@ -29,21 +29,27 @@ body {
 }
 
 .wrapper {
-  width: 800px;
+  width: 700px;
+  height: 300px;
   margin: 30px auto;
-  color: var(--white);
+  color: var(--base-color);
   text-align: center;
+  border: 1px solid;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  box-shadow:  5px 5px 50px rgb(44, 43, 43);
 }
 
 h1, h2, h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 100;
-  font-size: 2.6em;
+  font-family: 'Chivo mono', sans-serif;
+  font-weight: 400;
+  font-size: 2em;
   text-transform: uppercase;
 }
 
 #seconds, #tens {
   font-size: 2em;
+  font-family: 'Roboto', sans-serif;
 }
 
 button {
@@ -58,6 +64,8 @@ button {
   width: 180px;
   margin: 10px;
   outline: none;
+  border-radius: 5px;
+  font-family: 'Chivo mono', sans-serif;
 }
 
 button:hover{
