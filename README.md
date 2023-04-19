@@ -1,4 +1,4 @@
 # stopwatch
 
-Desenvolvido um cronometro
+Desenvolvido um cronômetro com Javascript básico para práticar.
 
