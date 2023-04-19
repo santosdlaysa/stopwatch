@@ -1,34 +1,38 @@
-/* Variabes */  
-$orange: #ffa600;
-$grey:#f3f3f3;
-$white: #fff;
-$base-color:$orange ;
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 /* Mixin's */  
 @mixin transition {
--webkit-transition: all 0.5s ease-in-out;
--moz-transition: all 0.5s ease-in-out;
-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-@mixin corners ($radius) {
--moz-border-radius: $radius;
--webkit-border-radius: $radius;
-border-radius: $radius; 
--khtml-border-radius: $radius; 
+
+@mixin corners($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius; 
+  -khtml-border-radius: $radius; 
+}
+
+/* Variables */
+:root {
+  --base-color: #4532a7;
+  --grey: #f3f3f3;
+  --white: #fff;
+  --orange: #ffa600;
 }
 
 body {
-background:$base-color;
-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-height:100%;
+  background: var(--base-color);
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  height: 100%;
 }
 
 .wrapper {
-width: 800px;
-margin: 30px auto;
-color:$white;
-text-align:center;
+  width: 800px;
+  margin: 30px auto;
+  color: var(--white);
+  text-align: center;
 }
 
 h1, h2, h3 {
@@ -38,26 +42,27 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-#seconds, #tens{
-  font-size:2em;
+#seconds, #tens {
+  font-size: 2em;
 }
 
-button{
-@include corners (5px);
-background:$base-color;
-color:$white;
-border: solid 1px $white;
-text-decoration:none;
-cursor:pointer;
-font-size:1.2em;
-padding:18px 10px;
-width:180px;
-margin: 10px;
- outline: none;
-  &:hover{
-	@include transition;
-	background:$white;
-	border: solid 1px $white;
-	color:$base-color;
-	}
+button {
+  @include corners(5px);
+  background: var(--base-color);
+  color: var(--white);
+  border: solid 1px var(--white);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 18px 10px;
+  width: 180px;
+  margin: 10px;
+  outline: none;
+}
+
+button:hover{
+    @include transition;
+    background: var(--white);
+    border: solid 1px var(--white);
+    color: var(--base-color);
 }
