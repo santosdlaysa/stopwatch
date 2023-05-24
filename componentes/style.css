@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap');
 /* Mixin's */  
 @mixin transition {
   -webkit-transition: all 0.5s ease-in-out;
@@ -16,7 +17,7 @@
 
 /* Variables */
 :root {
-  --base-color: #4532a7;
+  --base-color: #302d3f;
   --grey: #f3f3f3;
   --white: #fff;
   --orange: #ffa600;
@@ -24,33 +25,58 @@
 
 body {
   background: var(--base-color);
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "Playfair", sans-serif;
   height: 100%;
 }
 
-.wrapper {
-  width: 700px;
-  height: 300px;
-  margin: 30px auto;
-  color: var(--base-color);
+.title {
+  width: 400px;
+  height: 60px;
+  margin: 85px auto;
+  color: var(--white);
   text-align: center;
-  border: 1px solid;
-  background-color: #f3f3f3;
-  border-radius: 10px;
-  box-shadow:  5px 5px 50px rgb(44, 43, 43);
 }
 
-h1, h2, h3 {
+.stopwatch {
+  width: 400px;
+  height: 100px;
+  margin: 20px auto;
+  color: var(--white);
+  text-align: center;
+}
+
+h1, h3 {
   font-family: 'Chivo mono', sans-serif;
-  font-weight: 400;
-  font-size: 2em;
+  font-weight: 800;
+  font-size: 5em;
   text-transform: uppercase;
 }
 
-#seconds, #tens {
-  font-size: 2em;
+#seconds, #tens, #horas {
   font-family: 'Roboto', sans-serif;
+  height: 100px;
+
 }
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 4.2em;
+  font-weight: 300;
+  margin: 100px 0 0 0;
+  padding: 0;
+  text-align: center;
+  color: var(--white);
+
+}
+
+.numbers {
+  width: 300px;
+  height: 300px;
+  margin: 70px auto;
+  border-radius: 60%;
+  border: solid 2px var(--white);
+}
+
 
 button {
   @include corners(5px);
