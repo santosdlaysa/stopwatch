@@ -1,8 +1,8 @@
 window.onload = function () {
-  var horas = 00;
+  var minutes = 00;
   var seconds = 00; 
   var tens = 00; 
-  var appendHoras = document.getElementById("horas");
+  var appendMinutes = document.getElementById("minutes");
   var appendTens = document.getElementById("tens");
   var appendSeconds = document.getElementById("seconds");
   var buttonStart = document.getElementById('button-start');
@@ -23,10 +23,10 @@ window.onload = function () {
 
   buttonReset.onclick = function() {
      clearInterval(Interval);
-    horas = "00";
+    minutes = "00";
     tens = "00";
   	seconds = "00";
-    appendHoras.innerHTML = horas;
+    appendMinutes.innerHTML = minutes;
     appendTens.innerHTML = tens;
   	appendSeconds.innerHTML = seconds;
   }
@@ -59,16 +59,16 @@ window.onload = function () {
     }
 
     if (seconds > 59) {
-      console.log("horas");
-      horas++;
-      appendHoras.innerHTML = "0" + horas;
+      console.log("minutes");
+      minutes++;
+      appendMinutes.innerHTML = "0" + minutes;
       seconds = 0;
       appendSeconds.innerHTML = "0" + 0;
 
     }
 
-    if (horas > 9){
-      appendHoras.innerHTML = horas;
+    if (minutes > 9){
+      appendMinutes.innerHTML = minutes;
     }
   
   }
